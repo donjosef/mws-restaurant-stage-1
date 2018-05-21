@@ -183,6 +183,13 @@ nav h1 a {
     display: inline-block;
 }
 
+#restaurants-list li a:focus {
+    background: orange;
+    color: white;
+    text-decoration: underline;
+}
+
+
 /* ====================== Restaurant Details ====================== */
 .inside header {
   position: fixed;
