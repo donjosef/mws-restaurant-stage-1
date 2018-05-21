@@ -26,13 +26,18 @@ ul, li {
 	font-size: 10pt;
 	color: #333;
 }
+
+/*footer link*/
 a {
 	color: orange;
 	text-decoration: none;
+    padding: 16px 0;
 }
+
 a:hover, a:focus {
-	color: #3397db;
-	text-decoration: none;
+	color: orange;
+    outline: 2px solid orange;
+    
 }
 a img{
 	border: none 0px #fff;
@@ -73,6 +78,7 @@ nav h1 a {
   font-weight: 200;
   letter-spacing: 10px;
   text-transform: uppercase;
+    padding: 15px;
 }
 #breadcrumb {
     padding: 10px 40px 16px;
