@@ -145,6 +145,7 @@ nav h1 a {
   letter-spacing: 0;
   padding: 0 10px;
   width: 200px;
+
 }
 
 .filter-options select:focus {
@@ -178,7 +179,6 @@ nav h1 a {
   display: block;
   margin: 0;
   max-width: 100%;
-  min-height: 248px;
   min-width: 100%;
 }
 #restaurants-list li h1 {
@@ -310,6 +310,12 @@ MEDIA QUERY
     .filter-options label {
         display: flex;
         justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #restaurants-list li {
+        width: 100%;
     }
 }
 
