@@ -297,12 +297,23 @@ nav h1 a {
 MEDIA QUERY
 -----------*/   
 @media screen and (max-width: 810px) {
+    nav h1 a {
+        font-size: 0.7em;
+    }
     .filter-options label:first-of-type {
         margin-right: 0;
     }
     .filter-options label {
         display: flex;
         justify-content: space-between;
+    }
+    
+    #restaurants-list li a {
+        font-size: 0.75em;
+    }
+    
+    #footer {
+        font-size: 0.7em;
     }
 }
 
