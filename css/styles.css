@@ -320,6 +320,14 @@ MEDIA QUERY
 }
 
 
+/*make the labels and select menus on top of each other*/
+@media screen and (max-width: 450px) {
+    .filter-options label {
+        flex-direction: column;
+    }
+    
+}
+
 
 
 
