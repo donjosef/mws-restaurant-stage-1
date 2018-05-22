@@ -317,6 +317,13 @@ MEDIA QUERY
     #restaurants-list li {
         width: 100%;
     }
+    
+    /*avoiding focus ring mess up the style*/
+    #footer {
+        display: flex;
+        flex-direction: column;
+    }
+    
 }
 
 
