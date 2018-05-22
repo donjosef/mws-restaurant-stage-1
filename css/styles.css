@@ -303,7 +303,10 @@ nav h1 a {
 -----------
 MEDIA QUERY
 -----------*/   
-@media screen and (max-width: 798px) {
+@media screen and (max-width: 810px) {
+    .filter-options label:first-of-type {
+        margin-right: 0;
+    }
     .filter-options label {
         display: flex;
         justify-content: space-between;
