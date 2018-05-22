@@ -301,7 +301,8 @@ MEDIA QUERY
 -----------*/   
 @media screen and (max-width: 798px) {
     .filter-options label {
-        display: block;
+        display: flex;
+        justify-content: space-between;
     }
 }
 
