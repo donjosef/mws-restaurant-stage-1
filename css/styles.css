@@ -160,6 +160,7 @@ nav h1 a {
   padding: 30px 20px;
   text-align: center;
 }
+
 #restaurants-list li {
   background-color: #fff;
   border: 2px solid #ccc;
@@ -179,6 +180,7 @@ nav h1 a {
 #restaurants-list li h1 {
     padding-left: 10px;
     margin-bottom: 10px;
+    margin-top: 2px;
 }
 #restaurants-list p {
   margin: 0;
@@ -186,11 +188,11 @@ nav h1 a {
   padding: 8px;
 }
 #restaurants-list li a {
-   color: orange;
+  color: orange;
   padding: 10px 0;
   text-decoration: none;
   text-transform: uppercase;
-    display: inline-block;
+  display: inline-block;
 }
 
 #restaurants-list li a:focus {
