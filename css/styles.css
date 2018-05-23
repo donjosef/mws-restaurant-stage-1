@@ -236,6 +236,8 @@ nav h1 a {
   position: absolute;
   width: 50%;
 }
+
+
 #restaurant-name {
   color: #e36700;
   font-family: Arial,sans-serif;
@@ -399,6 +401,16 @@ MEDIA QUERY RESTAURANT PAGE
     }
     .inside #map-container {
         margin-top: -15px; /*little tweak since the header is smaller*/
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #maincontent {
+        padding-bottom: 50px; /*important because the footer becomes taller*/
+    }
+    
+    #restaurant-container, #reviews-container {
+        width: 90%;     
     }
 }
 
