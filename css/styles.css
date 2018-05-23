@@ -69,15 +69,16 @@ nav {
 nav h1 {
     padding: 25px 0;
     margin-bottom: 0;
+   display: flex; 
+    justify-content: center;
 }
 nav h1 a {
   color: #fff;
   font-weight: 200;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
   text-transform: uppercase;
-  padding: 15px;
-  display: flex; 
-  justify-content: center;
+  padding: 15px 0;
+
 }
 #breadcrumb {
     padding: 10px 40px 16px;
