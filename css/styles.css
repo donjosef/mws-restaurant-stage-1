@@ -50,7 +50,6 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
-  padding-top: 173px; /*compensate with padding top the position fixed of the header*/
 }
 
 #footer {
@@ -217,6 +216,9 @@ nav h1 a {
   top: 0;
   width: 100%;
   z-index: 1000;
+}
+.inside #maincontent {
+   padding-top: 173px; /*compensate with padding top the position fixed of the header*/ 
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
