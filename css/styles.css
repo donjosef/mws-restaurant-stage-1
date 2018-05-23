@@ -50,7 +50,9 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
+  padding-top: 173px; /*compensate with padding top the position fixed of the header*/
 }
+
 #footer {
   background-color: #444;
   color: #eee;
@@ -87,7 +89,7 @@ nav h1 a {
     list-style: none;
     background-color: #eee;
     margin: 0;
-    width: 50%; /* 50% of the header*/
+    width: 50%; /*50% of heder*/
 }
 
 /* Display list items side by side */
@@ -218,10 +220,10 @@ nav h1 a {
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 87%;
+  height: calc(100vh - 117px); /*100 viewport height - 117px(the height of the header)*/
   position: fixed;
   right: 0;
-  top: 80px;
+  top: 117px; /*compensate the position top because fixed remove the map from natural flow*/
   width: 50%;
 }
 .inside #map {
@@ -264,7 +266,7 @@ nav h1 a {
 #restaurant-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 190px 40px 30px; /*compensate with padding top the position fixed of the header*/
+  padding: 40px 40px 30px; 
   width: 50%;
 }
 #reviews-container {
@@ -303,7 +305,7 @@ nav h1 a {
 
 /*
 -----------
-MEDIA QUERY
+MEDIA QUERY HOME PAGE
 -----------*/   
 @media screen and (max-width: 810px) {
     nav h1 a {
@@ -349,8 +351,29 @@ MEDIA QUERY
     .filter-options label {
         flex-direction: column;
     }
-    
 }
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
