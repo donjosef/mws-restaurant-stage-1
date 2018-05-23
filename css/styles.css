@@ -330,6 +330,10 @@ MEDIA QUERY
         flex-direction: column;
     }
     
+     #restaurants-list li a {
+        font-size: 0.65em;
+    }
+    
 }
 
 
