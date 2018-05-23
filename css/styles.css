@@ -258,14 +258,15 @@ nav h1 a {
 	width: 90%;
 }
 
-#restaurant-container, #reviews-container {
+#restaurant-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
+  padding: 170px 40px 30px; /*compensate with padding top the position fixed of the header*/
   width: 50%;
 }
 #reviews-container {
   padding: 30px 40px 80px;
+  width: 50%;
 }
 #reviews-container h2 {
   color: #f58500;
