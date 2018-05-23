@@ -83,6 +83,7 @@ nav h1 a {
 
 #breadcrumb {
     padding: 10px 40px 16px;
+    font-size: 1.3em;
     list-style: none;
     background-color: #eee;
     margin: 0;
@@ -103,8 +104,9 @@ nav h1 a {
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #0275d8;
-    text-decoration: none;
+    color: #333;
+    text-transform: uppercase;
+    
 }
 
 /* Add a color on mouse-over */
@@ -280,13 +282,11 @@ nav h1 a {
 }
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
+  border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
-  overflow: hidden;
   padding: 20px;
-  position: relative;
   width: 100%;
 }
 #reviews-list li p {
