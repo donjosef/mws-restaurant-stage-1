@@ -384,10 +384,21 @@ MEDIA QUERY RESTAURANT PAGE
     }
     #restaurant-container, #reviews-container {
         width: 80%;
+        padding-left: 0;
+        padding-right: 0;
     }
     
     .inside #footer {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    #breadcrumb {
+        font-size: 1.1em;
+    }
+    .inside #map-container {
+        margin-top: -15px; /*little tweak since the header is smaller*/
     }
 }
 
