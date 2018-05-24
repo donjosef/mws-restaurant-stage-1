@@ -368,7 +368,7 @@ MEDIA QUERY RESTAURANT PAGE
     #breadcrumb {
         width: 100%;
     }
-    #maincontent {
+    .inside #maincontent {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
