@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
   fetchCuisines();
 });
 
+
+
 /**
  * Fetch all neighborhoods and set their HTML.
  */
@@ -177,3 +179,43 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 }
+
+
+
+    if(navigator.serviceWorker) {
+        navigator.serviceWorker.register('/sw.js').then(function() {
+            console.log('registration ok');
+        }).catch(function() {
+           console.log('registration failed');
+        });
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
