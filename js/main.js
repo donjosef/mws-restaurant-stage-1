@@ -180,15 +180,14 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 }
 
-
-
-    if(navigator.serviceWorker) {
-        navigator.serviceWorker.register('/sw.js').then(function() {
-            console.log('registration ok');
-        }).catch(function() {
-           console.log('registration failed');
-        });
-    }
+if(navigator.serviceWorker) {
+    navigator.serviceWorker.register('/sw.js').then(function() {
+        console.log('registration ok!');
+    }).catch(function() {
+        console.log('registration failed');
+    });
+}
+    
 
 
 

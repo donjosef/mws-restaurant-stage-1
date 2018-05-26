@@ -1,42 +1,59 @@
-self.addEventListener('install', function(e) {    
+var cacheName = 'restaurant-reviews-v1';
+var cacheFiles = [
+    '/',
+    'css/styles.css',
+    'js/dbhelper.js',
+    'js/main.js',
+    'js/restaurant_info.js',
+    'data/restaurants.json',
+    'img/1.jpg',
+    'img/2.jpg',
+    'img/3.jpg',
+    'img/4.jpg',
+    'img/5.jpg',
+    'img/6.jpg',
+    'img/7.jpg',
+    'img/8.jpg',
+    'img/9.jpg',
+    'img/10.jpg'
+];
+//
+self.addEventListener('install', function(e) {
+   console.log('[Service worker] installed');
+    
     e.waitUntil(
-        caches.open("restaurant-reviews-v1")
-        .then(cache => {
-            console.log(cache);
-            return cache.addAll([
-                '/',
-                'css/styles.css',
-                'js/main.js',
-                'js/dbhelper.js',
-                'js/restaurant_info.js',
-                'img/1.jpg',
-                'img/2.jpg',
-                'img/3.jpg',
-                'img/4.jpg',
-                'img/5.jpg',
-                'img/6.jpg',
-                'img/7.jpg',
-                'img/8.jpg',
-                'img/9.jpg',
-                'img/10.jpg',
-                'data/restaurants.JSON',
-            ]);
-        })
-    ); //waitUntil receives a promise. WHen the promise resolve, the browser knows that the install is completed
+        caches.open(cacheName).then(function(cache) {
+            console.log('[serviceWorker] caching cacheFIles')
+            return cache.addAll(cacheFiles)
+        }) //caches.open returns a promise. waitUntil receives a promise and when it resolve, the browser knows that install is complete
+    )
 });
+
+
 
 self.addEventListener('fetch', function(e) {
-    console.log(e.request.url);
+   console.log('[Service worker] fetching', e.request.url);
     
     e.respondWith(
-      caches.match(e.request) //it accepts a request or a url. It returns a promise that resolves to a response if a match is found
-      .then(response => {
-        if(response) {
-             return response; //return the response from the cache
-        } else {
-             return fetch(e.request); //return from the network
-        }
-      })
-    );
+        caches.match(e.request).then(function(response) {
+            if(response) {
+                console.log('[serviceworker] found in cache', e.request.url);
+                return response;
+            } //return the response if found in cache
+            
+            var clonedRequest = e.request.clone();
+            
+            fetch(clonedRequest)
+                .then(function(response) {
+                
+                    var clonedResponse = response.clone();
+                
+                    caches.open(cacheName).then(function(cache) {
+                        cache.put(e.request, clonedResponse);
+                        return response;
+                    })
+                })  //if no match is found, fetch from the network
+        })
+    )
+    
 });
-
